@@ -1,24 +1,21 @@
 <template>
-  <div class="form-controls row">
+  <div class="form-controls row align-items-end">
     <div class="col">
-      <b-form-input
-        v-model="numberOfEntries"
-        placeholder="Всего записей"
-      ></b-form-input>
+      <b-form-group label="Всего записей" label-text-align="right">
+        <b-form-input v-model="numberOfEntries"></b-form-input>
+      </b-form-group>
     </div>
 
     <div class="col">
-      <b-form-input
-        v-model="entriesPerPage"
-        placeholder="Записей на страницу"
-      ></b-form-input>
+      <b-form-group label="Записей на страницу">
+        <b-form-input v-model="entriesPerPage"></b-form-input>
+      </b-form-group>
     </div>
 
     <div class="col">
-      <b-form-input
-        v-model="variantsInputString"
-        placeholder="Перечень вариантов"
-      ></b-form-input>
+      <b-form-group label="Перечень вариантов">
+        <b-form-input v-model="variantsInputString"></b-form-input>
+      </b-form-group>
     </div>
 
     <div class="col">
@@ -81,3 +78,9 @@ export default {
   },
 }
 </script>
+
+<style>
+legend {
+  text-align: left;
+}
+</style>
