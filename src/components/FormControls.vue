@@ -18,9 +18,6 @@
     <b-button @click="onApplyFakeData">Применить</b-button>
 
     <b-button @click="onResetFakeData">Сбросить</b-button>
-
-    <div>{{ $store.getters.getFakeData }}</div>
-    <div>{{ $store.getters.getEntriesPerPage }}</div>
   </div>
 </template>
 

@@ -11,6 +11,14 @@ export default new Vuex.Store({
   getters: {
     getFakeData: s => s.fakeData,
     getEntriesPerPage: s => s.entriesPerPage,
+    getFakeDataForGraph: s => {
+      const result = {}
+      s.fakeData.forEach(d => {
+        if (result[d.rand]) result[d.rand] += 1
+        else result[d.rand] = 1
+      })
+      return result
+    },
   },
   mutations: {
     setFakeData(state, payload) {
