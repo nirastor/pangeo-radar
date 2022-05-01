@@ -1,23 +1,30 @@
 <template>
-  <div class="form-controls">
-    <b-form-input
-      v-model="numberOfEntries"
-      placeholder="Всего записей"
-    ></b-form-input>
+  <div class="form-controls row">
+    <div class="col">
+      <b-form-input
+        v-model="numberOfEntries"
+        placeholder="Всего записей"
+      ></b-form-input>
+    </div>
 
-    <b-form-input
-      v-model="entriesPerPage"
-      placeholder="Записей на страницу"
-    ></b-form-input>
+    <div class="col">
+      <b-form-input
+        v-model="entriesPerPage"
+        placeholder="Записей на страницу"
+      ></b-form-input>
+    </div>
 
-    <b-form-input
-      v-model="variantsInputString"
-      placeholder="Перечень вариантов"
-    ></b-form-input>
+    <div class="col">
+      <b-form-input
+        v-model="variantsInputString"
+        placeholder="Перечень вариантов"
+      ></b-form-input>
+    </div>
 
-    <b-button @click="onApplyFakeData">Применить</b-button>
-
-    <b-button @click="onResetFakeData">Сбросить</b-button>
+    <div class="col">
+      <b-button @click="onApplyFakeData" class="me-4">Применить</b-button>
+      <b-button @click="onResetFakeData">Сбросить</b-button>
+    </div>
   </div>
 </template>
 

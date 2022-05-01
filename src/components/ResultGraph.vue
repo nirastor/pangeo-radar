@@ -32,7 +32,18 @@ export default {
         labels: Object.keys(rawData),
         datasets: [
           {
-            backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
+            backgroundColor: [
+              '#4e79a7',
+              '#f28e2c',
+              '#e15759',
+              '#76b7b2',
+              '#59a14f',
+              '#edc949',
+              '#af7aa1',
+              '#ff9da7',
+              '#9c755f',
+              '#bab0ab',
+            ],
             data: Object.values(rawData),
           },
         ],
