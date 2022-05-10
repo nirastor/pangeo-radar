@@ -3,6 +3,7 @@
 </template>
 
 <script>
+// start work with additional task
 import { Pie } from 'vue-chartjs/legacy'
 
 import {
