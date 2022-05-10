@@ -7,6 +7,7 @@
     <div class="row">
       <div class="col col-6 pe-5">
         <ResultTable />
+        <ExportToCsvButton />
       </div>
       <div class="col col-6 ps-5">
         <ResultGraph />
@@ -19,6 +20,7 @@
 import FormControls from '@/components/FormControls.vue'
 import ResultTable from '@/components/ResultTable.vue'
 import ResultGraph from '@/components/ResultGraph.vue'
+import ExportToCsvButton from '@/components/ExportToCsvButton.vue'
 
 export default {
   name: 'HomeView',
@@ -26,6 +28,7 @@ export default {
     FormControls,
     ResultTable,
     ResultGraph,
+    ExportToCsvButton,
   },
 }
 </script>
