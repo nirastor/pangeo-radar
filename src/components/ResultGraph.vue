@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { Pie, Bar } from 'vue-chartjs/legacy'
+import { Pie, Bar, Radar } from 'vue-chartjs/legacy'
 
 import {
   Chart as ChartJS,
@@ -29,6 +29,9 @@ import {
   CategoryScale,
   BarElement,
   LinearScale,
+  PointElement,
+  RadialLinearScale,
+  LineElement,
 } from 'chart.js'
 
 ChartJS.register(
@@ -38,11 +41,15 @@ ChartJS.register(
   BarElement,
   LinearScale,
   ArcElement,
-  CategoryScale
+  CategoryScale,
+  PointElement,
+  RadialLinearScale,
+  LineElement
 )
 
 const PIE = 'Pie'
 const BAR = 'Bar'
+const RADAR = 'Radar'
 const CHARTS = {
   [PIE]: { componentName: PIE, displayName: 'Круговая', chartOptions: {} },
   [BAR]: {
@@ -56,10 +63,22 @@ const CHARTS = {
       },
     },
   },
+  [RADAR]: {
+    componentName: RADAR,
+    displayName: 'Радар',
+    chartOptions: {
+      radialLinearScale: {
+        ticks: {
+          min: 0,
+          max: 100,
+        },
+      },
+    },
+  },
 }
 
 export default {
-  components: { Pie, Bar },
+  components: { Pie, Bar, Radar },
   data() {
     return {
       selectedChartType: PIE,
